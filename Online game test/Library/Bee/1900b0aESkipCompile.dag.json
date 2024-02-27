@@ -26,11 +26,18 @@
     {
       "Annotation": "BuildPlayerDataGenerator Library/BuildPlayerData/Editor/TypeDb-All.json",
       "DisplayName": "Extracting script serialization layouts",
-      "Action": "\"C:/Program Files/Unity/Hub/Editor/2023.2.7f1/Editor/Data\\Tools\\netcorerun\\netcorerun.exe\" \"C:/Program Files/Unity/Hub/Editor/2023.2.7f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\ScriptAssemblies\\Assembly-CSharp.dll\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\ScriptAssemblies\\Unity.InputSystem.dll\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\ScriptAssemblies\\Unity.InputSystem.ForUI.dll\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\ScriptAssemblies\\Unity.InputSystem.TestFramework.dll\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\ScriptAssemblies\\Unity.TextMeshPro.dll\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\ScriptAssemblies\\Unity.Timeline.dll\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\ScriptAssemblies\\Unity.VisualScripting.Core.dll\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\ScriptAssemblies\\Unity.VisualScripting.Flow.dll\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\ScriptAssemblies\\Unity.VisualScripting.State.dll\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\ScriptAssemblies\\UnityEngine.TestRunner.dll\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\ScriptAssemblies\\UnityEngine.UI.dll\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\PackageCache\\com.unity.ext.nunit@2.0.5\\net40\\unity-custom\\nunit.framework.dll\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\PackageCache\\com.unity.testtools.codecoverage@1.2.5\\lib\\ReportGenerator\\ReportGeneratorMerged.dll\" -a=\"C:\\Users\\dliak\\Online game test\\Library\\PackageCache\\com.unity.visualscripting@1.8.0\\Runtime\\VisualScripting.Flow\\Dependencies\\NCalc\\Unity.VisualScripting.Antlr3.Runtime.dll\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2023.2.7f1\\Editor\\Data\\Managed\\UnityEngine\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2023.2.7f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netfx\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2023.2.7f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netstandard\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2023.2.7f1\\Editor\\Data\\NetStandard\\EditorExtensions\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2023.2.7f1\\Editor\\Data\\NetStandard\\Extensions\\2.0.0\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2023.2.7f1\\Editor\\Data\\NetStandard\\ref\\2.1.0\" -s=\"C:\\Users\\dliak\\Online game test\\Library\\ScriptAssemblies\" -s=\"C:\\Users\\dliak\\Online game test\\Library\\PackageCache\\com.unity.ext.nunit@2.0.5\\net40\\unity-custom\" -s=\"C:\\Users\\dliak\\Online game test\\Library\\PackageCache\\com.unity.testtools.codecoverage@1.2.5\\lib\\ReportGenerator\" -s=\"C:\\Users\\dliak\\Online game test\\Library\\PackageCache\\com.unity.visualscripting@1.8.0\\Runtime\\VisualScripting.Flow\\Dependencies\\NCalc\" -o=\"Library/BuildPlayerData/Editor\" -rn=\"\" -tn=\"TypeDb-All.json\"",
+      "Action": "\"C:/Program Files/Unity/Hub/Editor/2023.2.7f1/Editor/Data\\Tools\\netcorerun\\netcorerun.exe\" \"C:/Program Files/Unity/Hub/Editor/2023.2.7f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Assets\\Photon\\PhotonLibs\\netstandard2.0\\Photon3Unity3D.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Assets\\Photon\\PhotonLibs\\WebSocket\\websocket-sharp.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\Assembly-CSharp.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\PhotonChat.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\PhotonRealtime.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\PhotonUnityNetworking.Demos.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\PhotonUnityNetworking.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\PhotonUnityNetworking.Utilities.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\Unity.InputSystem.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\Unity.InputSystem.ForUI.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\Unity.InputSystem.TestFramework.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\Unity.TextMeshPro.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\Unity.Timeline.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\Unity.VisualScripting.Core.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\Unity.VisualScripting.Flow.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\Unity.VisualScripting.State.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\UnityEngine.TestRunner.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\\UnityEngine.UI.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\PackageCache\\com.unity.ext.nunit@2.0.5\\net40\\unity-custom\\nunit.framework.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\PackageCache\\com.unity.testtools.codecoverage@1.2.5\\lib\\ReportGenerator\\ReportGeneratorMerged.dll\" -a=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\PackageCache\\com.unity.visualscripting@1.8.0\\Runtime\\VisualScripting.Flow\\Dependencies\\NCalc\\Unity.VisualScripting.Antlr3.Runtime.dll\" -s=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Assets\\Photon\\PhotonLibs\\netstandard2.0\" -s=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Assets\\Photon\\PhotonLibs\\WebSocket\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2023.2.7f1\\Editor\\Data\\Managed\\UnityEngine\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2023.2.7f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netfx\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2023.2.7f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netstandard\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2023.2.7f1\\Editor\\Data\\NetStandard\\EditorExtensions\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2023.2.7f1\\Editor\\Data\\NetStandard\\Extensions\\2.0.0\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\2023.2.7f1\\Editor\\Data\\NetStandard\\ref\\2.1.0\" -s=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\ScriptAssemblies\" -s=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\PackageCache\\com.unity.ext.nunit@2.0.5\\net40\\unity-custom\" -s=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\PackageCache\\com.unity.testtools.codecoverage@1.2.5\\lib\\ReportGenerator\" -s=\"C:\\Users\\dliak\\Desktop\\ruber_Shooter\\Online game test\\Library\\PackageCache\\com.unity.visualscripting@1.8.0\\Runtime\\VisualScripting.Flow\\Dependencies\\NCalc\" -o=\"Library/BuildPlayerData/Editor\" -rn=\"\" -tn=\"TypeDb-All.json\"",
       "Inputs": [
         "C:/Program Files/Unity/Hub/Editor/2023.2.7f1/Editor/Data/Tools/netcorerun/netcorerun.exe",
         "C:/Program Files/Unity/Hub/Editor/2023.2.7f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe",
+        "Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll",
+        "Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll",
         "Library/ScriptAssemblies/Assembly-CSharp.dll",
+        "Library/ScriptAssemblies/PhotonChat.dll",
+        "Library/ScriptAssemblies/PhotonRealtime.dll",
+        "Library/ScriptAssemblies/PhotonUnityNetworking.Demos.dll",
+        "Library/ScriptAssemblies/PhotonUnityNetworking.dll",
+        "Library/ScriptAssemblies/PhotonUnityNetworking.Utilities.dll",
         "Library/ScriptAssemblies/Unity.InputSystem.dll",
         "Library/ScriptAssemblies/Unity.InputSystem.ForUI.dll",
         "Library/ScriptAssemblies/Unity.InputSystem.TestFramework.dll",
@@ -46,6 +53,13 @@
         "Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
       ],
       "InputFlags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -205,6 +219,12 @@
       "File": "Assets/mcs.rsp"
     },
     {
+      "File": "Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll"
+    },
+    {
+      "File": "Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll"
+    },
+    {
       "File": "Library/Bee/1900b0aESkipCompile-inputdata.json"
     },
     {
@@ -218,6 +238,21 @@
     },
     {
       "File": "Library/ScriptAssemblies/Assembly-CSharp.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/PhotonChat.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/PhotonRealtime.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/PhotonUnityNetworking.Demos.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/PhotonUnityNetworking.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/PhotonUnityNetworking.Utilities.dll"
     },
     {
       "File": "Library/ScriptAssemblies/Unity.InputSystem.dll"
@@ -283,6 +318,6 @@
   "SharedResources": [],
   "Scanners": [],
   "Identifier": "Library/Bee/1900b0aESkipCompile.dag.json",
-  "PayloadsFile": "C:/Users/dliak/Online game test/Library/Bee/1900b0aESkipCompile.dag.payloads",
+  "PayloadsFile": "C:/Users/dliak/Desktop/ruber_Shooter/Online game test/Library/Bee/1900b0aESkipCompile.dag.payloads",
   "RelativePathToRoot": "../.."
 }
