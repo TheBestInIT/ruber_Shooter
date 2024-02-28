@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 2123762756838219435}
   - component: {fileID: 6865007442563413299}
   - component: {fileID: 6898666150376775562}
-  - component: {fileID: 3546069803537789660}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -86,9 +85,11 @@ MonoBehaviour:
   controlledObject: {fileID: 4855271292110228627}
   PlayerHead: {fileID: 8363408625899445250}
   parent: {fileID: 4855271292110228627}
+  view: {fileID: 8861377581823270427}
   rotationSpeed: 0.2
   animator: {fileID: 7921785282433171820}
   parentPos: {fileID: 4855271292110228627}
+  playerCamera: {fileID: 8945226216190396846}
 --- !u!54 &6865007442563413299
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -146,28 +147,6 @@ MonoBehaviour:
   m_DefaultActionMap: Movments
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &3546069803537789660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980984461953347813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &2033012242842831098
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,14 +290,13 @@ GameObject:
   m_Component:
   - component: {fileID: 381640449940976823}
   - component: {fileID: 8945226216190396846}
-  - component: {fileID: 5784222035197295288}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &381640449940976823
 Transform:
   m_ObjectHideFlags: 0
@@ -385,14 +363,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5784222035197295288
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2853100104796539704}
-  m_Enabled: 1
 --- !u!1 &2955736535073028100
 GameObject:
   m_ObjectHideFlags: 0

@@ -418,7 +418,6 @@
             "fullManagedTypeName": "UnityEngine.AudioBehaviour",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/Game.unity",
                 "Assets/Scenes/Loading.unity",
                 "Assets/Scenes/Lobby.unity"
             ]
@@ -429,7 +428,6 @@
             "fullManagedTypeName": "UnityEngine.AudioListener",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/Game.unity",
                 "Assets/Scenes/Loading.unity",
                 "Assets/Scenes/Lobby.unity"
             ]

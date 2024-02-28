@@ -24,13 +24,7 @@ public class SpawnPlayers : MonoBehaviour
             PlayerPrefs.SetInt("AAA",0);
         }
         PlayerPrefs.Save();
-        
-        
-        
-        Camera playerCamera = playerPrefab.GetComponentInChildren<Camera>();
-        Debug.Log(playerCamera.name);
-        playerCamera.gameObject.SetActive(false);
-      //  playerCamera.enabled = true;
+        // Перевіряємо, чи цей об'єкт належить локальному гравцеві
         
         
     }

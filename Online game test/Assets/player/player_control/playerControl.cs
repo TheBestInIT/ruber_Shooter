@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Photon.Pun;
+using UnityEditor;
 
 public class playerControl : MonoBehaviour
 {
@@ -14,8 +15,8 @@ public class playerControl : MonoBehaviour
     public GameObject PlayerHead;
     public GameObject parent;
 
-    PhotonView view;
-    PhotonView view2;
+    //PhotonView view;
+    public PhotonView view;
     
     #region MyRegion
     
@@ -28,25 +29,44 @@ public class playerControl : MonoBehaviour
     
     public Animator animator;
     private Vector3 lastPosition;
-    public GameObject parentPos; 
+    public GameObject parentPos;
+    public Camera playerCamera;
     
     void Start()
     {
+        
         playerInput = GetComponent<PlayerInput>();
         moveAction = playerInput.actions.FindAction("Move");
         rotateAction = playerInput.actions.FindAction("Screen Rotation");
         lastPosition = parentPos.transform.position;
-        view = GetComponent<PhotonView>();
-        view2 = parent.GetComponent<PhotonView>();
+       // view = GetComponent<PhotonView>();
+        CameraChosen();
+        //  view2 = parent.GetComponent<PhotonView>();
     }   
 
     void Update()
     {
-        if (view.IsMine && view2.IsMine)
+        if (view.IsMine)
         {
             PlayerMove();
             PlayerRotation();
             isMovePlayAnim();
+            //CameraChosen();
+        }
+    }
+
+    private void CameraChosen()
+    {
+        // Перевіряємо, чи ця камера належить локальному гравцю
+        if (view.IsMine)
+        {
+            // Робимо камеру активною для локального гравця
+            playerCamera.enabled = true;
+        }
+        else
+        {
+            // Вимикаємо камеру для інших гравців
+            playerCamera.enabled = false;
         }
     }
 
@@ -56,7 +76,6 @@ public class playerControl : MonoBehaviour
     {
         Vector2 direction = moveAction.ReadValue<Vector2>().normalized;
         controlledObject.transform.Translate(new Vector3(direction.x,0,direction.y) * speed * Time.deltaTime, Space.Self);
-       //PlayerHead.transform.Translate(new Vector3(direction.x,0,direction.y) * speed * Time.deltaTime, Space.Self);
     }
     void PlayerRotation()
     {
