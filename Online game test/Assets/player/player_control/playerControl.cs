@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Photon.Pun;
-using UnityEditor;
-
+using System;
 public class playerControl : MonoBehaviour
 {
     [SerializeField] float speed =10;
@@ -13,7 +12,6 @@ public class playerControl : MonoBehaviour
     private InputAction rotateAction;
     public GameObject controlledObject;
     public GameObject PlayerHead;
-    public GameObject parent;
 
     //PhotonView view;
     public PhotonView view;
@@ -31,47 +29,61 @@ public class playerControl : MonoBehaviour
     private Vector3 lastPosition;
     public GameObject parentPos;
     public Camera playerCamera;
+    delegate void MyDelegate();
+    MyDelegate Moves_OS;
     
     void Start()
     {
+       
+#if UNITY_EDITOR
+         Moves_OS = PC_Editor_Move;
+#elif UNITY_STANDALONE
+         Moves_OS = PC_Editor_Move;
+#elif UNITY_ANDROID
+        Moves_OS = Mobile_Move;
+#endif 
+        
+        /*
+         *REFACTOR THIS playerInput upper in #if
+         *
+         * 
+         */
+        
         
         playerInput = GetComponent<PlayerInput>();
         moveAction = playerInput.actions.FindAction("Move");
         rotateAction = playerInput.actions.FindAction("Screen Rotation");
         lastPosition = parentPos.transform.position;
-       // view = GetComponent<PhotonView>();
         CameraChosen();
-        //  view2 = parent.GetComponent<PhotonView>();
     }   
 
     void Update()
     {
         if (view.IsMine)
         {
-            PlayerMove();
-            PlayerRotation();
+            Moves_OS();
             isMovePlayAnim();
-            //CameraChosen();
         }
     }
 
-    private void CameraChosen()
-    {
-        // Перевіряємо, чи ця камера належить локальному гравцю
-        if (view.IsMine)
-        {
-            // Робимо камеру активною для локального гравця
-            playerCamera.enabled = true;
-        }
-        else
-        {
-            // Вимикаємо камеру для інших гравців
-            playerCamera.enabled = false;
-        }
-    }
-
-    #region MoveRotatinAnim
     
+    #region Mobile_MoveRotatin
+
+    void Mobile_Move()
+    {
+
+    }
+
+    #endregion
+    
+    #region PC_Move_Rotatin
+
+    void PC_Editor_Move()
+    {
+        PlayerMove();
+        PlayerRotation();
+    }
+
     void PlayerMove()
     {
         Vector2 direction = moveAction.ReadValue<Vector2>().normalized;
@@ -94,22 +106,46 @@ public class playerControl : MonoBehaviour
         //loj
     }
 
+  
+    #endregion
     private void isMovePlayAnim()
     {
         Vector3 currentPosition = parentPos.transform.position;
         float moveDistance = Vector3.Distance(currentPosition, lastPosition);
-
+              
         if (moveDistance > 0.01f) // Припустимо, що це відстань руху для активації анімації
         {
             animator.Play("Character");
         }
         else
         {
-           animator.Play("CharacterStay");
+            animator.Play("CharacterStay");
         }
-
+              
         lastPosition = currentPosition;
+    } 
+    private void CameraChosen() 
+    {
+             // Перевіряємо, чи ця камера належить локальному гравцю
+             if (view.IsMine)
+             {
+                 // Робимо камеру активною для локального гравця
+                 playerCamera.enabled = true;
+             }
+             else
+             {
+                 // Вимикаємо камеру для інших гравців
+                 playerCamera.enabled = false;
+             }
     }
-    #endregion
+
+    public void JumpUP(InputAction.CallbackContext context)
+    {
+        parentPos.GetComponent<Rigidbody>().AddForce(Vector3.up*5,ForceMode.Impulse);
+        Debug.Log("Jump");
+        Debug.Log("Jump");
+        Debug.Log("Jump");
+        Debug.Log("Jump");
+    }
 }
 

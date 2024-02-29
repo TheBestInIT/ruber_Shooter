@@ -280,6 +280,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 818731039443174923, guid: 020d073a2836a174ea342c7ba68cc4c8, type: 3}
   force: 100
   camera: {fileID: 8945226216190396846}
+  view: {fileID: 8861377581823270427}
 --- !u!1 &2853100104796539704
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +803,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 818731039443174923, guid: 020d073a2836a174ea342c7ba68cc4c8, type: 3}
   force: 100
   camera: {fileID: 8945226216190396846}
+  view: {fileID: 0}
 --- !u!1 &6525274164994712785
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,23 +2,33 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+
 
 public class gun_1 : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public float force = 10;
     public Camera camera;
+    public PhotonView view;
 
+    delegate void MyDelegate();
+    MyDelegate Shoot_OS;
     void Start()
     {
-        // Приховати курсор миші
+#if UNITY_EDITOR
+        Shoot_OS = PC_Shoot;
+#elif UNITY_STANDALONE
+        Shoot_OS = PC_Shoot;
+#elif UNITY_ANDROID
+        Shoot_OS = Mobile_Shoot;
+#endif 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     void OnDestroy()
     {
-        // Показати курсор миші при закритті гри
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -26,19 +36,27 @@ public class gun_1 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (view.IsMine)
         {
-            Shoot2();
+            Shoot_OS();
         }
     }
-   
 
+    private void PC_Shoot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Shoot();
+        }    
+    }
+    public void Mobile_Shoot()
+    {
+        Shoot();
+    }
 
-    private void Shoot2()
-
+    private void Shoot()
     {
         Debug.Log("Shoot__!!!");
-        // Отримуємо позицію та напрямок камери
         Camera mainCamera = camera;
         Vector3 centerOfScreen = mainCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, mainCamera.nearClipPlane));
         Ray ray = new Ray(mainCamera.transform.position, centerOfScreen - mainCamera.transform.position);
@@ -47,8 +65,6 @@ public class gun_1 : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             Vector3 targetPoint = hit.point;
-
-            // Створюємо пулю в позиції transform.position та рухаємо її у напрямку targetPoint
             GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
             Vector3 direction = (targetPoint - transform.position).normalized;
@@ -56,7 +72,6 @@ public class gun_1 : MonoBehaviour
         }
         else
         {
-            // Якщо луч не перетинає жодну поверхню, стріляємо у напрямку transform.forward
             GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * force, ForceMode.Impulse);
